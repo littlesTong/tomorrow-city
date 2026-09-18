@@ -44,27 +44,28 @@ body.player .tabbar button{flex:1;display:flex;flex-direction:column;align-items
 body.player .tabbar svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8}
 body.player .tabbar button[aria-current="true"]{color:#173e34;font-weight:600}
 body.player[data-tab="city"] .world-panel,body.player[data-tab="city"] .trend-panel,body.player[data-tab="city"] .queue-panel{display:none}
-body.player[data-tab="report"] .decision-panel,body.player[data-tab="report"] .living-city,body.player[data-tab="report"] .monthly-stats{display:none}
+body.player[data-tab="report"] .decision-panel,body.player[data-tab="report"] .monthly-stats{display:none}
+body.player[data-tab="report"] .player-left{display:none}
 body.player .decision-panel{position:static;margin-top:0}
 
-body.player[data-tab="city"] #build-button{position:sticky;bottom:calc(78px + env(safe-area-inset-bottom));z-index:5;box-shadow:0 8px 24px rgba(23,62,52,.25)}
+body.player #build-button{position:sticky;bottom:calc(78px + env(safe-area-inset-bottom));z-index:5;box-shadow:0 8px 24px rgba(23,62,52,.25)}
 .report-card{display:none}
 /* City: the picture only */
-body.player[data-tab="city"] .monthly-stats,body.player[data-tab="city"] .intro,body.player[data-tab="city"] .city-heading,body.player[data-tab="city"] #city-weather,body.player[data-tab="city"] #animation-toggle,body.player[data-tab="city"] #land-legend,body.player[data-tab="city"] #land-detail,body.player[data-tab="city"] #resource-summary,body.player[data-tab="city"] #population-flow,body.player[data-tab="city"] #carbon-ledger,body.player[data-tab="city"] #health-chain,body.player[data-tab="city"] #climate-breakdown,body.player[data-tab="city"] .monthly-report{display:none}
-body.player[data-tab="city"] .living-city{padding:0;border:0;background:none;margin:0}
-body.player[data-tab="city"] .city-map{border-radius:24px;min-height:calc(100vh - 190px);display:flex;align-items:center}
-body.player[data-tab="city"] .shell{padding-top:12px}
+body.player .monthly-stats,body.player .intro,body.player .city-heading,body.player #city-weather,body.player #animation-toggle,body.player #land-legend,body.player #land-detail,body.player #resource-summary,body.player #population-flow,body.player #carbon-ledger,body.player #health-chain,body.player #climate-breakdown,body.player .monthly-report{display:none}
+body.player .living-city{padding:0;border:0;background:none;margin:0}
+body.player .city-map{border-radius:24px;min-height:calc(100vh - 190px);display:flex;align-items:center}
+body.player .shell{padding-top:12px}
 /* Policy: six short cards on one screen */
 body.player .project.not-offered{display:none}
-body.player[data-tab="city"] .panel-description,body.player[data-tab="city"] #shock-briefing,body.player[data-tab="city"] #survival-risk,body.player[data-tab="city"] #selection-detail,body.player[data-tab="city"] .mission,body.player[data-tab="city"] .step-badge,body.player .project .policy-timing,body.player .project:not(.blocked) .project-summary{display:none}
-body.player[data-tab="city"] .decision-panel{padding:16px;border-radius:22px}
-body.player[data-tab="city"] #decision-title{font-size:22px;margin:4px 0 12px}
-body.player[data-tab="city"] .projects{grid-template-columns:1fr 1fr;gap:10px;margin:0}
-body.player[data-tab="city"] .project{min-height:0;padding:12px;gap:4px}
-body.player[data-tab="city"] .project-name{font-size:15px}
-body.player[data-tab="city"] .project.blocked .project-summary{font-size:11px;color:#a0523a}
-body.player[data-tab="city"] #build-button{margin-top:12px}
-body.player[data-tab="city"] .rest-button,body.player[data-tab="city"] .supply-button{padding:10px 14px;margin-top:8px;font-size:14px}
+body.player .panel-description,body.player #shock-briefing,body.player #survival-risk,body.player #selection-detail,body.player .mission,body.player .step-badge,body.player .project .policy-timing,body.player .project:not(.blocked) .project-summary{display:none}
+body.player .decision-panel{padding:16px;border-radius:22px}
+body.player #decision-title{font-size:22px;margin:4px 0 12px}
+body.player .projects{grid-template-columns:1fr 1fr;gap:10px;margin:0}
+body.player .project{min-height:0;padding:12px;gap:4px}
+body.player .project-name{font-size:15px}
+body.player .project.blocked .project-summary{font-size:11px;color:#a0523a}
+body.player #build-button{margin-top:12px}
+body.player .rest-button,body.player .supply-button{padding:10px 14px;margin-top:8px;font-size:14px}
 /* Report: current numbers,body.player curves,body.player total score */
 body.player[data-tab="report"] .world-panel,body.player[data-tab="report"] .monthly-report,body.player[data-tab="report"] .queue-panel,body.player[data-tab="report"] .intro,body.player[data-tab="report"] .trend-panel .model-note{display:none}
 body.player[data-tab="report"] .report-card{display:block;margin-bottom:14px}
@@ -79,9 +80,9 @@ body.player .report-tiles b{font-size:18px;color:#173e34}
 body.player .report-tiles i{font-style:normal;font-size:11px;margin-left:2px;color:#6b7a73}
 body.player .chart-tabs button[data-chart="backgroundWarming"],body.player .chart-tabs button[data-chart="populationHealth"],body.player .chart-tabs button[data-chart="airPollution"],body.player .chart-tabs button[data-chart="waterPollution"],body.player .chart-tabs button[data-chart="totalMortality"],body.player .chart-tabs button[data-chart="waterStock"],body.player .chart-tabs button[data-chart="minerals"]{display:none}
 .city-year{display:none}
-body.player[data-tab="city"] .city-map{min-height:0;display:block}
-body.player[data-tab="city"] .city-map svg{width:118%;margin:0 -9%;height:auto}
-body.player[data-tab="city"] .city-year{display:flex;justify-content:space-between;align-items:baseline;padding:4px 6px 12px;color:#173e34}
+body.player .city-map{min-height:0;display:block}
+body.player .city-map svg{width:118%;margin:0 -9%;height:auto}
+body.player .city-year{display:flex;justify-content:space-between;align-items:baseline;padding:4px 6px 12px;color:#173e34}
 body.player .city-year b{font-size:34px}
 body.player .city-year span{font-size:14px;color:#6b7a73}
 
@@ -121,8 +122,8 @@ body.player .header-actions{gap:6px}
 .level-foot{font-size:12px;color:#6b7a73}
 
 /* One screen: the living city sits above this year's decision */
-body.player[data-tab="city"] .city-map{min-height:0;margin-bottom:14px}
-body.player[data-tab="city"] .city-map svg{width:112%;margin:0 -6%}
+body.player .city-map{min-height:0;margin-bottom:14px}
+body.player .city-map svg{width:112%;margin:0 -6%}
 body.player .decision-panel{padding:16px;border-radius:22px}
 /* The year advances two ways, and they should not look like twins */
 body.player #build-button{width:100%;justify-content:space-between}
@@ -151,3 +152,20 @@ body.player .land-scale{margin:6px 0 0;font-size:11px;color:#8b9a92}
 .seg.residential,.dot.residential{background:#8fa8c4}.seg.industry,.dot.industry{background:#8c6b5d}
 .seg.energy,.dot.energy{background:#e0a33c}.seg.water,.dot.water{background:#5fa8ad}
 .seg.vacant,.dot.vacant{background:#d8dccd}
+
+/* Wide screens: the city stays on the left while policies or the report change on the right */
+@media (min-width:900px){
+ body.player .shell{max-width:1120px}
+ body.player .game-layout{display:grid;grid-template-columns:minmax(320px,1fr) minmax(360px,430px);gap:26px;align-items:start}
+ body.player .player-left{position:sticky;top:96px}
+ body.player[data-tab="report"] .player-left{display:block}
+ body.player .city-map svg{width:100%;margin:0}
+ body.player .site-header{padding-inline:max(16px,calc(50vw - 560px))}
+ body.player .tabbar{max-width:430px;margin-inline:auto;margin-right:max(16px,calc(50vw - 560px))}
+}
+
+body.player .city-column{display:none}
+/* The year-settled toast floats over the city instead of sitting in the layout */
+#scene-toast{position:absolute;left:50%;top:44%;transform:translate(-50%,10px);opacity:0;background:#173e34;color:#fff;padding:12px 20px;border-radius:40px;font-size:14px;pointer-events:none;transition:opacity .25s,transform .25s;box-shadow:0 5px 30px rgba(23,62,52,.25);z-index:4}
+#scene-toast.show{opacity:1;transform:translate(-50%,0)}
+body.player .living-city{position:relative}
