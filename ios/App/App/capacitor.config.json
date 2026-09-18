@@ -1,0 +1,12 @@
+{
+	"appId": "com.example.tomorrowcity",
+	"appName": "明日城市",
+	"webDir": "dist",
+	"ios": {
+		"contentInset": "never",
+		"backgroundColor": "#f7f8f4"
+	},
+	"packageClassList": [
+		"NativePurchasesPlugin"
+	]
+}
